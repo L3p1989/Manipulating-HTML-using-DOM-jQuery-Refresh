@@ -35,3 +35,13 @@ containerDiv.appendChild(btnTwo);
 btnTwo.addEventListener('click', () => {
    textInput.value == '' ? alert("You haven't typed anything!") : alert(textInput.value); 
 });
+//grab colorDiv
+const colorDiv = document.getElementById('colorDiv');
+//add mouseover event
+colorDiv.addEventListener('mouseover', () => {
+    //change background color to green
+    colorDiv.style.backgroundColor = 'green';
+}, addEventListener('mouseout', () => {
+    //change background color to white
+    colorDiv.style.backgroundColor = 'white';
+}));
