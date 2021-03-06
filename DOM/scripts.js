@@ -68,7 +68,7 @@ p.addEventListener('click', () => {
 //create button
 const btnThree = document.createElement('button');
 //create text
-const btnThreeTxt = document.createTextNode('My name?');
+const btnThreeTxt = document.createTextNode('My name');
 //add btnThreeTxt to btnThree
 btnThree.appendChild(btnThreeTxt);
 //create div
@@ -79,6 +79,27 @@ body.appendChild(btnThree);
 body.appendChild(nameDiv);
 //btnThree click event
 btnThree.addEventListener('click', () => {
+    //create text
     const name = document.createTextNode('L3p');
+    //if nameDiv doesn't have any text insert name, otherwise alert
     nameDiv.textContent == '' ? nameDiv.appendChild(name) : alert('You already know my name.');
 });
+//friends array
+const friends = ['Stephanie', 'Julius', 'Glenn', 'Luke', 'Siacca', 'Irish', 'Lynds', 'Necco', 'Andi'];
+//grab frndBtn
+const frndBtn = document.getElementById('frndBtn');
+//grab frndLst
+const frndLst = document.getElementById('frndLst');
+//counter
+let counter = 0
+//click event for frndBtn
+frndBtn.addEventListener('click', () => { 
+    //create li
+    const li = document.createElement('li');
+    //create text
+    const liTxt = document.createTextNode(friends[counter]);
+    //add liTxt to li
+    li.appendChild(liTxt);
+    //if counter equals 9 alert, otherwise add new li to frndLst and add 1 to counter
+    counter == 9 ? alert("That's all my friends") : frndLst.appendChild(li) && counter++;
+})
