@@ -64,4 +64,21 @@ p.addEventListener('click', () => {
     };
     //change text color to random color
     p.style.color = randomColor();
-})
+});
+//create button
+const btnThree = document.createElement('button');
+//create text
+const btnThreeTxt = document.createTextNode('My name?');
+//add btnThreeTxt to btnThree
+btnThree.appendChild(btnThreeTxt);
+//create div
+const nameDiv = document.createElement('div');
+//insert btnThree into body
+body.appendChild(btnThree);
+//insert nameDiv into body
+body.appendChild(nameDiv);
+//btnThree click event
+btnThree.addEventListener('click', () => {
+    const name = document.createTextNode('L3p');
+    nameDiv.textContent == '' ? nameDiv.appendChild(name) : alert('You already know my name.');
+});
