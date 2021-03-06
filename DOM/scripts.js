@@ -31,3 +31,7 @@ body.appendChild(containerDiv);
 containerDiv.appendChild(textInput);
 //insert btnTwo into containerDiv
 containerDiv.appendChild(btnTwo);
+//click event listener for btnTwo
+btnTwo.addEventListener('click', () => {
+   textInput.value == '' ? alert("You haven't typed anything!") : alert(textInput.value); 
+});
