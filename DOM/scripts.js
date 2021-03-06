@@ -45,3 +45,23 @@ colorDiv.addEventListener('mouseover', () => {
     //change background color to white
     colorDiv.style.backgroundColor = 'white';
 }));
+//create p
+const p = document.createElement('p');
+//create text
+const pTxt = document.createTextNode('This text changes colors when you click on it!');
+//insert pTxt into p
+p.appendChild(pTxt);
+//insert p into body
+body.appendChild(p);
+//click event listener
+p.addEventListener('click', () => {
+    //random color generator
+    const randomColor = () => {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random () * 256);
+        const b = Math.floor(Math.random () * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+    };
+    //change text color to random color
+    p.style.color = randomColor();
+})
