@@ -28,3 +28,15 @@ const colorDiv = $('<div style="height: 100px; Width: 100px; text-align: center;
 });
 //insert colorDiv to end of body
 body.append(colorDiv);
+//p is a paragraph element
+const p = $('<p style="cursor: pointer; user-select: none">this text changes colors when you click on it!</p>').click(() => {
+    const randomColor = () => {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random () * 256);
+        const b = Math.floor(Math.random () * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+    };
+    p.css('color', randomColor);
+});
+//insert p to end of body
+body.append(p);
