@@ -18,3 +18,13 @@ sbmtBtn.click(() => {
     //clear text inside txtBox
     txtBox.val('')
 });
+//colorDiv is a div element with 100px height, 100px width, text is center aligned, and has a hover function
+const colorDiv = $('<div style="height: 100px; Width: 100px; text-align: center;">Hover over me!</div>').hover(() => {
+    //when hovered over background-color is green
+    colorDiv.css('background-color', "green");
+}, () => {
+    //when no longer hovered over background-color changes to white
+    colorDiv.css('background-color', 'white');
+});
+//insert colorDiv to end of body
+body.append(colorDiv);
