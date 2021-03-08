@@ -49,3 +49,18 @@ const nameBtn = $('<button>My name</button>').click(() => {
 const nameDiv = $('<div></div>');
 //add nameBtn and nameDiv to body
 body.append(nameBtn, nameDiv);
+//grab #frndBtn
+const frndBtn = $('#frndBtn');
+//grab #frndLst
+const frndLst = $('#frndLst');
+//counter
+let counter = 0;
+//array of friends
+const friends = ['Stephanie', 'Julius', 'Glenn', 'Luke', 'Siacca', 'Irish', 'Lynds', 'Necco', 'Andi'];
+//click event listener for frndBtn
+frndBtn.click(() => {
+    //if counter equals 9 alert, otherwise append a list item with a friends name in it
+    counter == 9 ? alert("That's all my friends") : frndLst.append($(`<li>${friends[counter]}</li>`));
+    //counter + 1
+    counter++;
+});
