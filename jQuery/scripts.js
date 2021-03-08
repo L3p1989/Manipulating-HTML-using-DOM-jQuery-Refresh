@@ -1,4 +1,5 @@
-const btnOne = $('<button></button>').append('Click Me!').click(() => {
+const btnOne = $('<button>Click Me!</button>').click(() => {
     alert("Thank You!")
 });
-$('body').prepend(btnOne);
+const body = $('body');
+body.append(btnOne);
