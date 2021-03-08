@@ -40,3 +40,12 @@ const p = $('<p style="cursor: pointer; user-select: none">this text changes col
 });
 //insert p to end of body
 body.append(p);
+//nameBtn is a button element
+const nameBtn = $('<button>My name</button>').click(() => {
+    const nameSpan = $('<span>L3p</span>')
+    $('div').has('span').length ? alert('You know my name') : nameDiv.append(nameSpan);
+});
+//nameDiv is a div element
+const nameDiv = $('<div></div>');
+//add nameBtn and nameDiv to body
+body.append(nameBtn, nameDiv);
