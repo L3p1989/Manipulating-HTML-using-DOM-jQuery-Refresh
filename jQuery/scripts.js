@@ -30,19 +30,27 @@ const colorDiv = $('<div style="height: 100px; Width: 100px; text-align: center;
 body.append(colorDiv);
 //p is a paragraph element
 const p = $('<p style="cursor: pointer; user-select: none">this text changes colors when you click on it!</p>').click(() => {
+    //create randomColor function
     const randomColor = () => {
+        //r = number between 1-255
         const r = Math.floor(Math.random() * 256);
+        //g = number between 1-255
         const g = Math.floor(Math.random () * 256);
+        //b = number between 1-255
         const b = Math.floor(Math.random () * 256);
+        //return "rgb(r value, g value, b value)"
         return `rgb(${r}, ${g}, ${b})`;
     };
+    //p text color randomColor
     p.css('color', randomColor);
 });
 //insert p to end of body
 body.append(p);
 //nameBtn is a button element
 const nameBtn = $('<button>My name</button>').click(() => {
-    const nameSpan = $('<span>L3p</span>')
+    //nameSpan is a span element
+    const nameSpan = $('<span>L3p</span>');
+    //if div has a span alert, otherwise insert span to nameDiv
     $('div').has('span').length ? alert('You know my name') : nameDiv.append(nameSpan);
 });
 //nameDiv is a div element
